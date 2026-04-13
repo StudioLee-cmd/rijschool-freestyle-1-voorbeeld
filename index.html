@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RijStart Voorbeeld — Rijschool Amsterdam</title>
+  <meta name="description" content="RijStart Voorbeeld is jouw rijschool in Amsterdam. Professionele rijlessen, hoog slagingspercentage en persoonlijke begeleiding. Boek vandaag nog je proefles!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Rij<span>Start</span></a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#diensten" class="active">Diensten</a></li>
+          <li><a href="#resultaten">Resultaten</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#gallerij">Gallerij</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#contact" class="nav-cta">Gratis Proefles</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content" data-animate="fade-right">
+          <div class="hero-badge">
+            <i data-lucide="award" style="width:16px;height:16px;"></i>
+            Nr. 1 Rijschool Amsterdam
+          </div>
+          <h1>Leer rijden met <span>vertrouwen</span> en plezier</h1>
+          <p class="hero-text">
+            Bij RijStart Voorbeeld combineren we jarenlange ervaring met een persoonlijke aanpak. Onze geduldige instructeurs zorgen ervoor dat je ontspannen en goed voorbereid je rijbewijs haalt.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn-primary">
+              <i data-lucide="calendar" style="width:18px;height:18px;"></i>
+              Boek Proefles
+            </a>
+            <a href="#diensten" class="btn-outline">
+              <i data-lucide="arrow-down" style="width:18px;height:18px;"></i>
+              Bekijk Aanbod
+            </a>
+          </div>
+        </div>
+        <div class="hero-image" data-animate="fade-left">
+          <img src="images/hero.jpg" alt="Rijles in Amsterdam met RijStart Voorbeeld" loading="eager">
+          <div class="hero-float-stat">
+            <div class="number">96%</div>
+            <div class="label">Slagingspercentage</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="ticker" style="background:var(--color-accent,#f5a623);padding:12px 0;overflow:hidden;">
+    <div style="display:flex;gap:48px;animation:tickerScroll 20s linear infinite;white-space:nowrap;">
+      <span><iconify-icon icon="lucide:car"></iconify-icon> Rijlessen B</span><span><iconify-icon icon="lucide:zap"></iconify-icon> Spoedcursus</span><span><iconify-icon icon="lucide:bike"></iconify-icon> Motor A</span><span><iconify-icon icon="lucide:heart"></iconify-icon> Faalangst</span><span><iconify-icon icon="lucide:refresh-cw"></iconify-icon> Opfris</span><span><iconify-icon icon="lucide:book-open"></iconify-icon> Theorie</span><span><iconify-icon icon="lucide:car"></iconify-icon> Rijlessen B</span><span><iconify-icon icon="lucide:zap"></iconify-icon> Spoedcursus</span><span><iconify-icon icon="lucide:bike"></iconify-icon> Motor A</span><span><iconify-icon icon="lucide:heart"></iconify-icon> Faalangst</span><span><iconify-icon icon="lucide:refresh-cw"></iconify-icon> Opfris</span><span><iconify-icon icon="lucide:book-open"></iconify-icon> Theorie</span>
+    </div>
+  </div>
+  <style>@keyframes tickerScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}</style>
+  <style>.ticker span{display:inline-flex;align-items:center;gap:8px;font-size:0.85rem;font-weight:700;color:var(--color-bg,#0a0a0f);text-transform:uppercase;letter-spacing:0.05em;}</style>
+
+
+  
+  <!-- ======================== BEFORE / AFTER ======================== -->
+  <section class="ba-section" style="height:100vh;position:relative;overflow:hidden;background:#000;">
+    <div style="width:100%;height:100%;position:relative;">
+      <img src="images/craft.jpg" alt="Na" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;">
+      <img src="images/hero.jpg" alt="Voor" id="baBefore" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;">
+      <div id="baLabel" style="position:absolute;z-index:3;bottom:10%;left:50%;transform:translateX(-50%);text-align:center;opacity:0;">
+        <span style="display:inline-block;background:var(--color-accent,#C1FF72);color:#0a0a0a;padding:8px 20px;border-radius:99px;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;">Scroll om te zien</span>
+        <h2 style="font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.15;color:#fff;text-shadow:0 4px 20px rgba(0,0,0,0.6);">Van oud naar <em style="color:var(--color-accent,#C1FF72);">nieuw</em></h2>
+      </div>
+    </div>
+  </section>
+<!-- SERVICES -->
+  <section class="services" id="diensten">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <div class="section-label"><i data-lucide="layers" style="width:16px;height:16px;"></i> Ons Aanbod</div>
+        <h2 class="section-title">Rijlessen op maat voor elke leerling</h2>
+        <p class="section-subtitle">Van eerste les tot rijbewijs — wij bieden alles wat je nodig hebt om veilig en zelfverzekerd de weg op te gaan.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-animate="fade-up" data-delay="0">
+          <div class="service-icon"><i data-lucide="car" style="width:28px;height:28px;"></i></div>
+          <h3>Autorijlessen (B)</h3>
+          <p>Persoonlijke autorijlessen in moderne lesauto's. Van beginner tot examenniveau met een instructeur die zich aanpast aan jouw leerstijl en tempo.</p>
+        </div>
+        <div class="service-card" data-animate="fade-up" data-delay="100">
+          <div class="service-icon"><i data-lucide="zap" style="width:28px;height:28px;"></i></div>
+          <h3>Spoedcursus</h3>
+          <p>Snel je rijbewijs halen? Onze intensieve cursus biedt dagelijkse lessen zodat je binnen enkele weken klaar bent voor het examen.</p>
+        </div>
+        <div class="service-card" data-animate="fade-up" data-delay="200">
+          <div class="service-icon"><i data-lucide="bike" style="width:28px;height:28px;"></i></div>
+          <h3>Motorrijlessen (A)</h3>
+          <p>Droom je van vrijheid op twee wielen? Onze ervaren motorinstructeurs begeleiden je veilig naar je motorrijbewijs.</p>
+        </div>
+        <div class="service-card" data-animate="fade-up" data-delay="300">
+          <div class="service-icon"><i data-lucide="heart" style="width:28px;height:28px;"></i></div>
+          <h3>Faalangst Training</h3>
+          <p>Last van examenvrees? Met speciale begeleiding en ontspanningstechnieken helpen we je om met vertrouwen examen te doen.</p>
+        </div>
+        <div class="service-card" data-animate="fade-up" data-delay="400">
+          <div class="service-icon"><i data-lucide="refresh-cw" style="width:28px;height:28px;"></i></div>
+          <h3>Opfrislessen</h3>
+          <p>Lang niet gereden? Onze opfrislessen brengen je rijvaardigheid snel weer op peil. Ideaal na een lange pauze of voor extra zekerheid.</p>
+        </div>
+        <div class="service-card" data-animate="fade-up" data-delay="500">
+          <div class="service-icon"><i data-lucide="book-open" style="width:28px;height:28px;"></i></div>
+          <h3>Theorie Begeleiding</h3>
+          <p>Online theorieles met persoonlijke ondersteuning. Inclusief oefenexamens en uitleg bij moeilijke onderwerpen tot je slaagt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats" id="resultaten">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item" data-animate="fade-up" data-delay="0">
+          <div class="stat-number" data-count="96">0</div>
+          <div class="stat-label">% Slagingspercentage</div>
+        </div>
+        <div class="stat-item" data-animate="fade-up" data-delay="100">
+          <div class="stat-number" data-count="2500">0</div>
+          <div class="stat-label">Geslaagde Leerlingen</div>
+        </div>
+        <div class="stat-item" data-animate="fade-up" data-delay="200">
+          <div class="stat-number" data-count="15">0</div>
+          <div class="stat-label">Jaar Ervaring</div>
+        </div>
+        <div class="stat-item" data-animate="fade-up" data-delay="300">
+          <div class="stat-number" data-count="12">0</div>
+          <div class="stat-label">Gecertificeerde Instructeurs</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="reviews">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <div class="section-label"><i data-lucide="message-circle" style="width:16px;height:16px;"></i> Ervaringen</div>
+        <h2 class="section-title">Wat onze leerlingen zeggen</h2>
+        <p class="section-subtitle">Meer dan 2.500 tevreden leerlingen gingen je voor. Lees hun ervaringen met RijStart Voorbeeld.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card" data-animate="fade-up" data-delay="0">
+          <div class="stars">
+            <i data-lucide="star" style="width:18px;height:18px;fill:var(--amber);"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:var(--amber);"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:var(--amber);"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:var(--amber);"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:var(--amber);"></i>
+          </div>
+          <p class="testimonial-text">"Na meerdere rijscholen geprobeerd te hebben, was RijStart een verademing. Mijn instructeur was geduldig en legde alles helder uit. In 20 lessen had ik mijn rijbewijs!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">S</div>
+            <div>
+              <div class="testimonial-name">Sophie de Vries</div>
+              <div class="testimonial-role">Geslaagd in 2025</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-animate="fade-up" data-delay="150">
+          <div class="stars">
+            <i data-lucide="star" style="width:18px;height:18px;fill:var(--amber);"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:var(--amber);"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:var(--amber);"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:var(--amber);"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:var(--amber);"></i>
+          </div>
+          <p class="testimonial-text">"De spoedcursus was precies wat ik nodig had. Binnen 3 weken van nul naar rijbewijs. De planning was strak maar de sfeer altijd ontspannen. Absolute aanrader!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">M</div>
+            <div>
+              <div class="testimonial-name">Mohamed El Amrani</div>
+              <div class="testimonial-role">Spoedcursus — 3 weken</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-animate="fade-up" data-delay="300">
+          <div class="stars">
+            <i data-lucide="star" style="width:18px;height:18px;fill:var(--amber);"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:var(--amber);"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:var(--amber);"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:var(--amber);"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:var(--amber);"></i>
+          </div>
+          <p class="testimonial-text">"Ik had last van faalangst en had het bijna opgegeven. Dankzij de speciale begeleiding bij RijStart durfde ik eindelijk weer. Eerste keer geslaagd!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">L</div>
+            <div>
+              <div class="testimonial-name">Lisa Jansen</div>
+              <div class="testimonial-role">Faalangsttraining</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallerij">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <div class="section-label"><i data-lucide="image" style="width:16px;height:16px;"></i> In Beeld</div>
+        <h2 class="section-title">Onze rijschool in actie</h2>
+        <p class="section-subtitle">Een kijkje achter de schermen bij RijStart Voorbeeld. Moderne lesauto's, professionele instructeurs en blije leerlingen.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item" data-animate="fade-up" data-delay="0"><img src="images/hero.jpg" alt="Rijles in Amsterdam" loading="lazy"></div>
+        <div class="gallery-item" data-animate="fade-up" data-delay="50"><img src="images/about.jpg" alt="Over RijStart rijschool" loading="lazy"></div>
+        <div class="gallery-item" data-animate="fade-up" data-delay="100"><img src="images/carousel.jpg" alt="Lesauto RijStart" loading="lazy"></div>
+        <div class="gallery-item" data-animate="fade-up" data-delay="150"><img src="images/craft.jpg" alt="Rijvaardigheid oefenen" loading="lazy"></div>
+        <div class="gallery-item" data-animate="fade-up" data-delay="200"><img src="images/cta-bg.jpg" alt="Rijschool Amsterdam achtergrond" loading="lazy"></div>
+        <div class="gallery-item" data-animate="fade-up" data-delay="250"><img src="images/detail.jpg" alt="Detail lesauto" loading="lazy"></div>
+        <div class="gallery-item" data-animate="fade-up" data-delay="300"><img src="images/kitchen.jpg" alt="Theorie ruimte RijStart" loading="lazy"></div>
+        <div class="gallery-item" data-animate="fade-up" data-delay="350"><img src="images/project1.jpg" alt="Leerling geslaagd voor rijexamen" loading="lazy"></div>
+        <div class="gallery-item" data-animate="fade-up" data-delay="400"><img src="images/project2.jpg" alt="Rijles op de snelweg" loading="lazy"></div>
+        <div class="gallery-item" data-animate="fade-up" data-delay="450"><img src="images/team.jpg" alt="Team RijStart Voorbeeld" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <div class="section-label"><i data-lucide="help-circle" style="width:16px;height:16px;"></i> Veelgestelde Vragen</div>
+        <h2 class="section-title">Alles wat je wilt weten</h2>
+        <p class="section-subtitle">De meestgestelde vragen over onze rijlessen, prijzen en het examen.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item active" data-animate="fade-up" data-delay="0">
+          <button class="faq-question">
+            Hoeveel rijlessen heb ik nodig om te slagen?
+            <i data-lucide="plus" style="width:20px;height:20px;"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Gemiddeld hebben leerlingen bij ons 25-35 lessen nodig. Dit verschilt per persoon en hangt af van je leervermogen, hoe vaak je lesrijdt en of je eerder ervaring hebt. Tijdens een gratis proefles schatten we in hoeveel lessen jij nodig hebt.</p>
+          </div>
+        </div>
+        <div class="faq-item" data-animate="fade-up" data-delay="100">
+          <button class="faq-question">
+            Wat kost een rijles bij RijStart?
+            <i data-lucide="plus" style="width:20px;height:20px;"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Onze lessen beginnen vanaf een scherp tarief per lesuur. We bieden ook voordeelpakketten van 10 of 20 lessen met korting. Neem contact op voor een persoonlijke prijsopgave die past bij jouw situatie en budget.</p>
+          </div>
+        </div>
+        <div class="faq-item" data-animate="fade-up" data-delay="200">
+          <button class="faq-question">
+            Kan ik mijn rijbewijs in een spoedcursus halen?
+            <i data-lucide="plus" style="width:20px;height:20px;"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Ja! Onze spoedcursus is speciaal ontworpen voor wie snel wil slagen. Met dagelijkse lessen kun je binnen 2 tot 4 weken klaar zijn voor je examen. We regelen ook een snelle examendatum via het CBR.</p>
+          </div>
+        </div>
+        <div class="faq-item" data-animate="fade-up" data-delay="300">
+          <button class="faq-question">
+            Bieden jullie ook theorieles aan?
+            <i data-lucide="plus" style="width:20px;height:20px;"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Absoluut. We bieden online theorie-begeleiding met toegang tot oefenexamens, persoonlijke uitleg en studieplanning. Je kunt op je eigen tempo leren en altijd bij ons terecht met vragen.</p>
+          </div>
+        </div>
+        <div class="faq-item" data-animate="fade-up" data-delay="400">
+          <button class="faq-question">
+            Wat als ik zak voor mijn rijexamen?
+            <i data-lucide="plus" style="width:20px;height:20px;"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Geen zorgen — dat overkomt de beste. We analyseren samen wat er misging, oefenen gericht op die punten en plannen een herexamen. Veel van onze leerlingen slagen dan alsnog de eerste keer opnieuw.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <div class="cta-box" data-animate="fade-up">
+        <h2>Klaar om te beginnen?</h2>
+        <p>Boek vandaag nog je gratis proefles en ontdek waarom meer dan 2.500 leerlingen kozen voor RijStart Voorbeeld.</p>
+        <a href="tel:+31201234567" class="btn-primary">
+          <i data-lucide="phone" style="width:18px;height:18px;"></i>
+          Bel Nu: 020 - 123 4567
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">Rij<span>Start</span></div>
+          <p>Al 15 jaar de betrouwbaarste rijschool van Amsterdam. Persoonlijke aandacht, moderne lesauto's en een bewezen aanpak.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Diensten</h4>
+          <ul>
+            <li><a href="#diensten">Autorijlessen</a></li>
+            <li><a href="#diensten">Spoedcursus</a></li>
+            <li><a href="#diensten">Motorrijlessen</a></li>
+            <li><a href="#diensten">Faalangst Training</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Informatie</h4>
+          <ul>
+            <li><a href="#faq">Veelgestelde Vragen</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+31201234567">020 - 123 4567</a></li>
+            <li><a href="mailto:info@rijstartvoorbeeld.nl">info@rijstartvoorbeeld.nl</a></li>
+            <li>Keizersgracht 100</li>
+            <li>1015 AA Amsterdam</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 RijStart Voorbeeld. Alle rechten voorbehouden.</span>
+        <span>KvK: 12345678 | BTW: NL001234567B01</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- STUDIOLEE BADGE -->
+  <a href="https://www.studiolee.nl/rijscholen" class="studiolee-badge" target="_blank" rel="noopener">
+    Website door <span>StudioLee</span>
+  </a>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+    // Init Lucide icons
+    lucide.createIcons();
+
+    // Header scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Mobile toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    mobileToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Close mobile nav on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    // GSAP ScrollTrigger animations
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Fade up
+    document.querySelectorAll('[data-animate="fade-up"]').forEach(el => {
+      const delay = parseInt(el.dataset.delay || 0) / 1000;
+      gsap.from(el, {
+        scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' },
+        y: 50, opacity: 0, duration: 0.8, delay, ease: 'power3.out'
+      });
+    });
+
+    // Fade right
+    document.querySelectorAll('[data-animate="fade-right"]').forEach(el => {
+      gsap.from(el, {
+        scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
+        x: -60, opacity: 0, duration: 1, ease: 'power3.out'
+      });
+    });
+
+    // Fade left
+    document.querySelectorAll('[data-animate="fade-left"]').forEach(el => {
+      gsap.from(el, {
+        scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
+        x: 60, opacity: 0, duration: 1, ease: 'power3.out'
+      });
+    });
+
+    // Counter animation
+    document.querySelectorAll('[data-count]').forEach(el => {
+      const target = parseInt(el.dataset.count);
+      gsap.to(el, {
+        scrollTrigger: { trigger: el, start: 'top 90%' },
+        innerText: target,
+        duration: 2,
+        snap: { innerText: 1 },
+        ease: 'power2.out'
+      });
+    });
+
+    // FAQ toggle
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+      });
+    });
+  </script>
+
+    // Before/After slider
+    (function() {
+      var before = document.getElementById('baBefore');
+      var label = document.getElementById('baLabel');
+      if (!before || typeof gsap === 'undefined') return;
+      gsap.registerPlugin(ScrollTrigger);
+      var tl = gsap.timeline({
+        scrollTrigger: { trigger: '.ba-section', start: 'top top', end: '+=200%', pin: true, scrub: 0.5, anticipatePin: 1 }
+      });
+      tl.fromTo(before, { clipPath: 'inset(0 0 0 0)' }, { clipPath: 'inset(0 100% 0 0)', duration: 1, ease: 'none' });
+      tl.fromTo(label, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.5);
+    })();
+
+</body>
+</html>
